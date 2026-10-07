@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Инструмент под лупой: как проверять данные нейросетей | ОСИНТ-Сигнал</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Разбираем, как использовать языковые модели для структурирования данных и почему важно проверять их выводы.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Как сделать&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Разбираем, как использовать языковые модели для структурирования данных и почему важно проверять их выводы.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"chto-ponadobitsya\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#chto-ponadobitsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Что понадобится&lt;/span&gt;&lt;/a&gt;Что понадобится&lt;/h2&gt;\n&lt;p&gt;Для работы вам потребуется доступ к LLM (языковой модели), текстовый массив для анализа и базовое понимание логики промптов. Важно помнить, что нейросети склонны к галлюцинациям, поэтому для проверки фактов используйте протокол Беркли: поиск, сбор, сохранение и верификацию через независимые источники.&lt;/p&gt;\n&lt;h2 id=\"shagi\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#shagi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Шаги&lt;/span&gt;&lt;/a&gt;Шаги&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;Подготовка данных. Очистите текст от шума. Если данных много, используйте подход из статьи «Как собрать строгую базу данных из хаотичных постов в сети без готовых шаблонов», чтобы извлечь скрытые параметры в таблицу.&lt;/li&gt;\n&lt;li&gt;Формирование запроса. Четко определите задачу. Помните, что точность ИИ нестабильна: как показано в статье «Почему точность нейросетей — это иллюзия стабильности», даже незначительное перефразирование запроса может привести к смене результата.&lt;/li&gt;\n&lt;li&gt;Верификация. Проверьте полученные данные вручную. Сравните их с открытыми реестрами или спутниковыми снимками, если речь идет о геоданных.&lt;/li&gt;\n&lt;li&gt;Анализ рисков. Если вы используете ИИ-агентов, учитывайте методы защиты, описанные в статье «Как предсказать атаку на ИИ-агента до того, как она случится», чтобы предвидеть возможные манипуляции.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"gde-oshibayutsya\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#gde-oshibayutsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Где ошибаются&lt;/span&gt;&lt;/a&gt;Где ошибаются&lt;/h2&gt;\n&lt;p&gt;Главная ошибка — слепое доверие среднему баллу точности модели. Нейросети могут выдавать логически связный, но фактический неверный текст. Также они часто игнорируют контекст, который не был явно прописан в промпте. Помните, что модель не «понимает» истину, а предсказывает наиболее вероятное продолжение текста.&lt;/p&gt;\n&lt;h2 id=\"primer\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#primer\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Пример&lt;/span&gt;&lt;/a&gt;Пример&lt;/h2&gt;\n&lt;p&gt;Представьте, что вам нужно собрать данные о перемещении судов из постов в соцсетях. Вы просите модель извлечь даты, координаты и названия. После получения таблицы вы берете 10% случайных записей и проверяете их по спутниковым картам. Если модель ошиблась в 2 случаях из 10, значит, метод требует доработки промпта или ручной корректировки параметров извлечения.&lt;/p&gt;\n&lt;h2 id=\"osnovano-na-statyah\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#osnovano-na-statyah\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Основано на статьях&lt;/span&gt;&lt;/a&gt;Основано на статьях&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-04/learning-to-structure-data-from-user-generated-thematic-corp.html\"&gt;Как собрать строгую базу данных из хаотичных постов в сети без готовых шаблонов&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-03/generalization-is-stability-not-accuracy-multi-axis-evaluati.html\"&gt;Почему точность нейросетей — это иллюзия стабильности&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-03/speculative-safety-honeypot-toward-proactive-defense-against.html\"&gt;Как предсказать атаку на ИИ-агента до того, как она случится&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/learning-steganography-is-easy-learning-steganographic-reaso.html\"&gt;Скрытые рассуждения ИИ: почему их сложно научить обману&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Концепции: &lt;a href=\"concepts/spec-methods.html\"&gt;Методы и этика&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Разбираем, как использовать языковые модели для структурирования данных и почему важно проверять их выводы."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Инструмент под лупой: как проверять данные нейросетей","description":"Разбираем, как использовать языковые модели для структурирования данных и почему важно проверять их выводы.","vcsPath":"tutorials/howto-tool_review.md"},"headings":[{"title":"Что понадобится","href":"tutorials/howto-tool_review.html#chto-ponadobitsya","level":2},{"title":"Шаги","href":"tutorials/howto-tool_review.html#shagi","level":2},{"title":"Где ошибаются","href":"tutorials/howto-tool_review.html#gde-oshibayutsya","level":2},{"title":"Пример","href":"tutorials/howto-tool_review.html#primer","level":2},{"title":"Основано на статьях","href":"tutorials/howto-tool_review.html#osnovano-na-statyah","level":2}],"title":"Инструмент под лупой: как проверять данные нейросетей"},"router":{"pathname":"tutorials/howto-tool_review","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>

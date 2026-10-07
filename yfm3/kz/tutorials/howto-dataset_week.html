@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Апта деректер жиынтығы: AI агенттерінің сенімділігін қалай тексеруге болады | ОСИНТ-Сигнал</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Жүйені бақылау қағидаттарына сүйене отырып, AI қауіпсіздігін бағалау үшін ашық деректерді қалай пайдалану керектігін талдаймыз.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Қалай жасау&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Жүйені бақылау қағидаттарына сүйене отырып, AI қауіпсіздігін бағалау үшін ашық деректерді қалай пайдалану керектігін талдаймыз.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"ne-khazhet-bolady\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#ne-khazhet-bolady\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Не қажет болады&lt;/span&gt;&lt;/a&gt;Не қажет болады&lt;/h2&gt;\n&lt;p&gt;AI агенттерінің сенімділігін талдау үшін модельдердің манипуляцияға төзімділігін тексеру нәтижелері бар ашық деректер жиынтығы қажет. Қауіпсіздік бенчмарктары бар репозиторийлерді (мысалы, Hugging Face Datasets) қолданыңыз. Сізге Python ортасы (деректерді өңдеу үшін pandas кітапханасы) және «Доверие — это не оценка: как ограничить власть ИИ-агентов» мақаласын түсіну қажет. Есіңізде болсын, есептердегі жоғары қауіпсіздік рейтингі барлық қауіптерден қорғауға кепілдік бермейді.&lt;/p&gt;\n&lt;h2 id=\"khadamdar\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#khadamdar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Қадамдар&lt;/span&gt;&lt;/a&gt;Қадамдар&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;AI агентінің зиянды сұраулармен өзара әрекеттесу журналдары бар деректер жиынтығын таңдаңыз. Деректерде модельді оқыту әдістері туралы метадеректер бар екеніне көз жеткізіңіз.&lt;/li&gt;\n&lt;li&gt;Деректерді талдау ортасына жүктеңіз. Құрылымын тексеріңіз: шабуыл түрлері мен жүйе реакциясы бар бағандардың бар-жоғын анықтаңыз.&lt;/li&gt;\n&lt;li&gt;Бастапқы нәтижелер бойынша сүзуді жүзеге асырыңыз: модель сұрауды неше рет қабылдамады және ережелерді бұзуға қарамастан, неше рет орындады.&lt;/li&gt;\n&lt;li&gt;Алынған көрсеткіштерді жарияланған қауіпсіздік сипаттамаларымен салыстырыңыз. Егер айырмашылық 5–10%-дан асса, жүйе қатаң сыртқы бақылауды талап етеді.&lt;/li&gt;\n&lt;li&gt;AI нұсқауларды орындау кезінде бақылауды жоғалтатын үлгілерді анықтау үшін қателіктер жиілігін визуализациялаңыз.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"khaj-zherde-khatelesedi\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#khaj-zherde-khatelesedi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Қай жерде қателеседі&lt;/span&gt;&lt;/a&gt;Қай жерде қателеседі&lt;/h2&gt;\n&lt;p&gt;Басты қателік — бастапқы деректерді талдамай, жиынтық бағалауларға (рейтингтерге) сену. «Доверие — это не оценка: как ограничить власть ИИ-агентов» мақаласында атап өтілгендей, орташа қауіпсіздік көрсеткіші маңызды осалдықтарды жасырады. Сондай-ақ, оқыту шарттарын тексеруді жиі ұмытады: шектеулі деректер жиынтығында оқытылған модель тек тар сценарийлерде жоғары дәлдікті көрсетеді.&lt;/p&gt;\n&lt;h2 id=\"mysal\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#mysal\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Мысал&lt;/span&gt;&lt;/a&gt;Мысал&lt;/h2&gt;\n&lt;p&gt;AI агентіне 1000 сұраудан тұратын деректер жиынтығын елестетіңіз. Егер 990 сұрау дұрыс өңделсе, рейтинг 99%-ды құрайды. Алайда, қалған 10 сұрау бақылау ережелерін айналып өтуге қатысты болса, жүйе қауіпсіз емес. Талдау жалпы табыс пайызына емес, дәл осы 10 жағдайға бағытталуы керек.&lt;/p&gt;\n&lt;h2 id=\"negiz-bolghan-makhalalar\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#negiz-bolghan-makhalalar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Негіз болған мақалалар&lt;/span&gt;&lt;/a&gt;Негіз болған мақалалар&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/trust-is-not-a-score-runtime-assurance-contracts-for-high-ri.html\"&gt;Сенім — бұл баға емес: AI-агенттердің өкілеттігін қалай шектеуге болады&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Ұғымдар: &lt;a href=\"concepts/spec-data.html\"&gt;Ашық деректер&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Жүйені бақылау қағидаттарына сүйене отырып, AI қауіпсіздігін бағалау үшін ашық деректерді қалай пайдалану керектігін талдаймыз."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Апта деректер жиынтығы: AI агенттерінің сенімділігін қалай тексеруге болады","description":"Жүйені бақылау қағидаттарына сүйене отырып, AI қауіпсіздігін бағалау үшін ашық деректерді қалай пайдалану керектігін талдаймыз.","vcsPath":"tutorials/howto-dataset_week.md"},"headings":[{"title":"Не қажет болады","href":"tutorials/howto-dataset_week.html#ne-khazhet-bolady","level":2},{"title":"Қадамдар","href":"tutorials/howto-dataset_week.html#khadamdar","level":2},{"title":"Қай жерде қателеседі","href":"tutorials/howto-dataset_week.html#khaj-zherde-khatelesedi","level":2},{"title":"Мысал","href":"tutorials/howto-dataset_week.html#mysal","level":2},{"title":"Негіз болған мақалалар","href":"tutorials/howto-dataset_week.html#negiz-bolghan-makhalalar","level":2}],"title":"Апта деректер жиынтығы: AI агенттерінің сенімділігін қалай тексеруге болады"},"router":{"pathname":"tutorials/howto-dataset_week","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>

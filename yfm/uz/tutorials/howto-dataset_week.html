@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Hafta ma'lumotlar to'plami: AI agentlarining ishonchliligini qanday tekshirish kerak | OSINT-Signal</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Tizim nazorati tamoyillariga asoslanib, AI xavfsizligini baholash uchun ochiq ma'lumotlardan qanday foydalanishni ko'rib chiqamiz.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Qanday qilish&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Tizim nazorati tamoyillariga asoslanib, AI xavfsizligini baholash uchun ochiq ma'lumotlardan qanday foydalanishni ko'rib chiqamiz.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"nimalar-kerak-boladi\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#nimalar-kerak-boladi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Nimalar kerak bo'ladi&lt;/span&gt;&lt;/a&gt;Nimalar kerak bo'ladi&lt;/h2&gt;\n&lt;p&gt;AI agentlarining ishonchliligini tahlil qilish uchun sizga modellarning manipulyatsiyaga chidamliligini sinovdan o'tkazish natijalari bo'lgan ochiq ma'lumotlar to'plami kerak bo'ladi. Xavfsizlik benchmarklari bo'lgan omborlardan (masalan, Hugging Face Datasets) foydalaning. Sizga Python muhiti (ma'lumotlarni qayta ishlash uchun pandas kutubxonasi) va «Доверие — это не оценка: как ограничить власть ИИ-агентов» maqolasini tushunish kerak bo'ladi. Esda tutingki, hisobotlardagi yuqori xavfsizlik reytingi barcha tahdidlardan himoyani kafolatlamaydi.&lt;/p&gt;\n&lt;h2 id=\"qadamlar\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#qadamlar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Qadamlar&lt;/span&gt;&lt;/a&gt;Qadamlar&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;AI agentining zararli so'rovlar bilan o'zaro ta'siri jurnallarini o'z ichiga olgan ma'lumotlar to'plamini tanlang. Ma'lumotlar modelni o'qitish usullari haqidagi metama'lumotlarni o'z ichiga olganligiga ishonch hosil qiling.&lt;/li&gt;\n&lt;li&gt;Ma'lumotlarni tahlil muhitiga yuklang. Strukturani tekshiring: hujum turlari va tizim reaksiyasi bo'lgan ustunlar mavjudligini aniqlang.&lt;/li&gt;\n&lt;li&gt;Birlamchi natijalar bo'yicha filtrlashni amalga oshiring: model necha marta so'rovni rad etdi va qoidalarni buzishiga qaramay, necha marta uni bajardi.&lt;/li&gt;\n&lt;li&gt;Olingan ko'rsatkichlarni e'lon qilingan xavfsizlik xususiyatlari bilan solishtiring. Agar farq 5–10% dan oshsa, tizim qat'iy tashqi nazoratni talab qiladi.&lt;/li&gt;\n&lt;li&gt;AI ko'rsatmalarni bajarish ustidan nazoratni yo'qotadigan naqshlarni aniqlash uchun xatoliklar chastotasini vizualizatsiya qiling.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"qayerda-xato-qilinadi\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#qayerda-xato-qilinadi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Qayerda xato qilinadi&lt;/span&gt;&lt;/a&gt;Qayerda xato qilinadi&lt;/h2&gt;\n&lt;p&gt;Asosiy xato — birlamchi ma'lumotlarni tahlil qilmasdan, umumlashtirilgan baholarga (reytinglarga) ishonishdir. «Доверие — это не оценка: как ограничить власть ИИ-агентов» maqolasida ta'kidlanganidek, o'rtacha xavfsizlik ko'rsatkichi muhim zaifliklarni yashiradi. Shuningdek, o'qitish shartlarini tekshirishni ko'pincha unutishadi: cheklangan ma'lumotlar to'plamida o'qitilgan model faqat tor stsenariylarda yuqori aniqlikni ko'rsatadi.&lt;/p&gt;\n&lt;h2 id=\"misol\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#misol\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Misol&lt;/span&gt;&lt;/a&gt;Misol&lt;/h2&gt;\n&lt;p&gt;AI agentiga 1000 ta so'rov bilan ma'lumotlar to'plamini tasavvur qiling. Agar 990 ta so'rov to'g'ri qayta ishlangan bo'lsa, reyting 99% ni tashkil qiladi. Biroq, qolgan 10 ta so'rov nazorat qoidalarini chetlab o'tishga tegishli bo'lsa, tizim xavfsiz emas. Tahlil umumiy muvaffaqiyat foiziga emas, aynan shu 10 ta holatga qaratilishi kerak.&lt;/p&gt;\n&lt;h2 id=\"asos-bolgan-maqolalar\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#asos-bolgan-maqolalar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Asos bo'lgan maqolalar&lt;/span&gt;&lt;/a&gt;Asos bo'lgan maqolalar&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/trust-is-not-a-score-runtime-assurance-contracts-for-high-ri.html\"&gt;Ishonch — bu ball emas: sun'iy intellekt agentlarini qanday cheklash kerak&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Tushunchalar: &lt;a href=\"concepts/spec-data.html\"&gt;Ochiq ma'lumotlar&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Tizim nazorati tamoyillariga asoslanib, AI xavfsizligini baholash uchun ochiq ma'lumotlardan qanday foydalanishni ko'rib chiqamiz."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Hafta ma'lumotlar to'plami: AI agentlarining ishonchliligini qanday tekshirish kerak","description":"Tizim nazorati tamoyillariga asoslanib, AI xavfsizligini baholash uchun ochiq ma'lumotlardan qanday foydalanishni ko'rib chiqamiz.","vcsPath":"tutorials/howto-dataset_week.md"},"headings":[{"title":"Nimalar kerak bo'ladi","href":"tutorials/howto-dataset_week.html#nimalar-kerak-boladi","level":2},{"title":"Qadamlar","href":"tutorials/howto-dataset_week.html#qadamlar","level":2},{"title":"Qayerda xato qilinadi","href":"tutorials/howto-dataset_week.html#qayerda-xato-qilinadi","level":2},{"title":"Misol","href":"tutorials/howto-dataset_week.html#misol","level":2},{"title":"Asos bo'lgan maqolalar","href":"tutorials/howto-dataset_week.html#asos-bolgan-maqolalar","level":2}],"title":"Hafta ma'lumotlar to'plami: AI agentlarining ishonchliligini qanday tekshirish kerak"},"router":{"pathname":"tutorials/howto-dataset_week","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>

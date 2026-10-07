@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Спутник недели: как самостоятельно анализировать снимки из космоса | ОСИНТ-Сигнал</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Научитесь находить и интерпретировать изменения на поверхности Земли, используя открытые данные и методы компьютерного зрения.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Как сделать&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Научитесь находить и интерпретировать изменения на поверхности Земли, используя открытые данные и методы компьютерного зрения.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"chto-ponadobitsya\"&gt;&lt;a href=\"tutorials/howto-sat_week.html#chto-ponadobitsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Что понадобится&lt;/span&gt;&lt;/a&gt;Что понадобится&lt;/h2&gt;\n&lt;p&gt;Для анализа вам потребуются доступ к спутниковым снимкам (например, Sentinel Hub или Google Earth Engine) и базовые навыки работы с геоинформационными системами (ГИС). Важно понимать, что спутниковые данные — это не просто картинки, а многоканальные матрицы, где каждый пиксель несет спектральную информацию.&lt;/p&gt;\n&lt;h2 id=\"shagi\"&gt;&lt;a href=\"tutorials/howto-sat_week.html#shagi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Шаги&lt;/span&gt;&lt;/a&gt;Шаги&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;Выбор области интереса: определите объект (здания, корабли, лесные массивы). Используйте методы из статьи «Считаем объекты на спутниковых снимках без дообучения нейросетей», чтобы распознавать объекты без сложной перенастройки моделей.&lt;/li&gt;\n&lt;li&gt;Сбор данных: выгрузите снимки за разные периоды времени. Сравнение разновременных кадров позволяет выявить динамику изменений.&lt;/li&gt;\n&lt;li&gt;Анализ изменений: наложите снимки друг на друга. Если вы анализируете городскую среду, примените подход из статьи «Цифровой двойник города: как нейросети проектируют изменения в реальности» для оценки того, как текущие объекты соответствуют планируемым изменениям.&lt;/li&gt;\n&lt;li&gt;Верификация: проверьте полученные данные через альтернативные источники (карты, открытые реестры), чтобы исключить артефакты съемки.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"gde-oshibayutsya\"&gt;&lt;a href=\"tutorials/howto-sat_week.html#gde-oshibayutsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Где ошибаются&lt;/span&gt;&lt;/a&gt;Где ошибаются&lt;/h2&gt;\n&lt;p&gt;Главная ошибка — принятие теней или облаков за реальные объекты. Также часто путают сезонные изменения (например, таяние снега) с антропогенным воздействием. Помните: спутниковый снимок — это наблюдательный метод, он фиксирует корреляцию, а не доказывает причинно-следственную связь.&lt;/p&gt;\n&lt;h2 id=\"primer\"&gt;&lt;a href=\"tutorials/howto-sat_week.html#primer\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Пример&lt;/span&gt;&lt;/a&gt;Пример&lt;/h2&gt;\n&lt;p&gt;Вы хотите отследить строительство нового жилого комплекса. Сначала вы находите снимки за прошлый месяц и текущий. Используя алгоритмы подсчета объектов, вы сравниваете количество фундаментов. Если ИИ-агент, описанный в «Цифровом двойнике города», показывает, что плотность застройки превышает норму, вы можете визуально подтвердить это, сравнив спутниковый снимок с планом застройки.&lt;/p&gt;\n&lt;h2 id=\"osnovano-na-statyah\"&gt;&lt;a href=\"tutorials/howto-sat_week.html#osnovano-na-statyah\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Основано на статьях&lt;/span&gt;&lt;/a&gt;Основано на статьях&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/from-pixels-to-policy-a-multi-agent-system-for-intervention.html\"&gt;Цифровой двойник города: как нейросети проектируют изменения в реальности&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/cobicount-separating-object-and-background-responses-for-rem.html\"&gt;Считаем объекты на спутниковых снимках без дообучения нейросетей&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Концепции: &lt;a href=\"concepts/spec-geo.html\"&gt;Спутники и геоданные&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Научитесь находить и интерпретировать изменения на поверхности Земли, используя открытые данные и методы компьютерного зрения."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Спутник недели: как самостоятельно анализировать снимки из космоса","description":"Научитесь находить и интерпретировать изменения на поверхности Земли, используя открытые данные и методы компьютерного зрения.","vcsPath":"tutorials/howto-sat_week.md"},"headings":[{"title":"Что понадобится","href":"tutorials/howto-sat_week.html#chto-ponadobitsya","level":2},{"title":"Шаги","href":"tutorials/howto-sat_week.html#shagi","level":2},{"title":"Где ошибаются","href":"tutorials/howto-sat_week.html#gde-oshibayutsya","level":2},{"title":"Пример","href":"tutorials/howto-sat_week.html#primer","level":2},{"title":"Основано на статьях","href":"tutorials/howto-sat_week.html#osnovano-na-statyah","level":2}],"title":"Спутник недели: как самостоятельно анализировать снимки из космоса"},"router":{"pathname":"tutorials/howto-sat_week","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>

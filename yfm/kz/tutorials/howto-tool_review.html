@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Инструмент лупа астында: нейрожелі деректерін қалай тексеруге болады | ОСИНТ-Сигнал</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Тілдік модельдерді деректерді құрылымдау үшін қалай қолдану керектігін және олардың қорытындыларын тексерудің маңыздылығын талдаймыз.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Қалай жасау&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Тілдік модельдерді деректерді құрылымдау үшін қалай қолдану керектігін және олардың қорытындыларын тексерудің маңыздылығын талдаймыз.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"ne-khazhet\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#ne-khazhet\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Не қажет&lt;/span&gt;&lt;/a&gt;Не қажет&lt;/h2&gt;\n&lt;p&gt;Жұмыс істеу үшін сізге LLM (тілдік модельге) қолжетімділік, талдауға арналған мәтіндер жиынтығы және промпт логикасын түсіну қажет. Нейрожелілердің қателіктерге (галлюцинацияларға) бейім екенін ұмытпаңыз, сондықтан фактілерді тексеруде Беркли хаттамасын қолданыңыз: іздеу, жинау, сақтау және тәуелсіз дереккөздер арқылы верификация.&lt;/p&gt;\n&lt;h2 id=\"khadamdar\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#khadamdar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Қадамдар&lt;/span&gt;&lt;/a&gt;Қадамдар&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;Деректерді дайындау. Мәтінді артық ақпараттан тазартыңыз. Егер деректер көп болса, «Как собрать строгую базу данных из хаотичных постов в сети без готовых шаблонов» мақаласындағы тәсілді қолданып, жасырын параметрлерді кестеге шығарыңыз.&lt;/li&gt;\n&lt;li&gt;Сұранысты қалыптастыру. Тапсырманы нақты белгілеңіз. Нейрожелінің дәлдігі тұрақсыз екенін есте сақтаңыз: «Почему точность нейросетей — это иллюзия стабильности» мақаласында көрсетілгендей, сұранысты сәл өзгерту нәтиженің өзгеруіне әкелуі мүмкін.&lt;/li&gt;\n&lt;li&gt;Верификация. Алынған деректерді қолмен тексеріңіз. Егер геодеректер туралы болса, оларды ашық тізілімдермен немесе жерсеріктік суреттермен салыстырыңыз.&lt;/li&gt;\n&lt;li&gt;Тәуекелдерді талдау. Егер сіз AI-агенттерді қолдансаңыз, «Как предсказать атаку на ИИ-агента до того, как она случится» мақаласында сипатталған қорғаныс әдістерін ескеріңіз.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"khaj-zherde-khatelesedi\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#khaj-zherde-khatelesedi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Қай жерде қателеседі&lt;/span&gt;&lt;/a&gt;Қай жерде қателеседі&lt;/h2&gt;\n&lt;p&gt;Басты қателік — модельдің орташа дәлдік балына соқыр сену. Нейрожелілер логикалық жағынан байланысты, бірақ фактілік тұрғыдан қате мәтін шығаруы мүмкін. Сондай-ақ, олар көбінесе промптта нақты жазылмаған контекстті елемейді.&lt;/p&gt;\n&lt;h2 id=\"mysal\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#mysal\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Мысал&lt;/span&gt;&lt;/a&gt;Мысал&lt;/h2&gt;\n&lt;p&gt;Сізге әлеуметтік желілердегі жазбалардан кемелердің қозғалысы туралы деректер жинау керек делік. Модельден күндерді, координаттарды және атауларды бөліп алуды сұрайсыз. Кестені алғаннан кейін, кездейсоқ 10% жазбаны таңдап, оларды жерсеріктік карталар бойынша тексересіз. Егер модель 10 жазбаның 2-уінде қателессе, демек, әдіс промптты жақсартуды немесе деректерді алу параметрлерін қолмен түзетуді талап етеді.&lt;/p&gt;\n&lt;h2 id=\"negiz-bolghan-makhalalar\"&gt;&lt;a href=\"tutorials/howto-tool_review.html#negiz-bolghan-makhalalar\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Негіз болған мақалалар&lt;/span&gt;&lt;/a&gt;Негіз болған мақалалар&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-04/learning-to-structure-data-from-user-generated-thematic-corp.html\"&gt;Дайын үлгісіз бейберекет жазбалардан нақты деректер қорын қалай құруға болады&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-03/generalization-is-stability-not-accuracy-multi-axis-evaluati.html\"&gt;Нейрожелілердің дәлдігі: тұрақтылық иллюзиясы&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-03/speculative-safety-honeypot-toward-proactive-defense-against.html\"&gt;AI-агентке жасалатын шабуылды алдын ала болжау әдісі&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/learning-steganography-is-easy-learning-steganographic-reaso.html\"&gt;Жасанды интеллекттің жасырын ойлау қабілеті&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Ұғымдар: &lt;a href=\"concepts/spec-methods.html\"&gt;Әдістер және этика&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Тілдік модельдерді деректерді құрылымдау үшін қалай қолдану керектігін және олардың қорытындыларын тексерудің маңыздылығын талдаймыз."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Инструмент лупа астында: нейрожелі деректерін қалай тексеруге болады","description":"Тілдік модельдерді деректерді құрылымдау үшін қалай қолдану керектігін және олардың қорытындыларын тексерудің маңыздылығын талдаймыз.","vcsPath":"tutorials/howto-tool_review.md"},"headings":[{"title":"Не қажет","href":"tutorials/howto-tool_review.html#ne-khazhet","level":2},{"title":"Қадамдар","href":"tutorials/howto-tool_review.html#khadamdar","level":2},{"title":"Қай жерде қателеседі","href":"tutorials/howto-tool_review.html#khaj-zherde-khatelesedi","level":2},{"title":"Мысал","href":"tutorials/howto-tool_review.html#mysal","level":2},{"title":"Негіз болған мақалалар","href":"tutorials/howto-tool_review.html#negiz-bolghan-makhalalar","level":2}],"title":"Инструмент лупа астында: нейрожелі деректерін қалай тексеруге болады"},"router":{"pathname":"tutorials/howto-tool_review","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>

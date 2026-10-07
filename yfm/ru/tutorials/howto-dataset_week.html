@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="../" />
+        <title>Датасет недели: как проверять надежность ИИ-агентов | ОСИНТ-Сигнал</title>
+        
+        
+        <meta name="generator" content="Diplodoc Platform v5.15.6">
+        <meta name="description" content="Разбираем, как использовать открытые данные для оценки безопасности ИИ, опираясь на принципы контроля систем.">
+        
+        <style type="text/css">html, body {min-height:100vh; height:100vh;}</style>
+        <link rel="icon" type="image/svg+xml" href="_assets/logo.svg">
+        
+        <link type="text/css" rel="stylesheet" href="_bundle/vendor-593a6546600e304d.css"/>
+        <link type="text/css" rel="stylesheet" href="_bundle/app-78e49b3fc9a05a8f.css"/>
+        <link type="text/css" rel="stylesheet" href="_assets/biosignal.css"/>
+    </head>
+    <body class="g-root g-root_theme_light">
+        <div id="root"></div>
+        <script type="application/json" id="diplodoc-state">
+            {"data":{"leading":false,"html":"&lt;p&gt;&lt;em&gt;Как сделать&lt;/em&gt; · 2026-10-04&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Разбираем, как использовать открытые данные для оценки безопасности ИИ, опираясь на принципы контроля систем.&lt;/strong&gt;&lt;/p&gt;\n&lt;h2 id=\"chto-ponadobitsya\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#chto-ponadobitsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Что понадобится&lt;/span&gt;&lt;/a&gt;Что понадобится&lt;/h2&gt;\n&lt;p&gt;Для анализа надежности ИИ-агентов вам потребуются открытые датасеты с результатами тестирования моделей на устойчивость к манипуляциям. Используйте репозитории с бенчмарками безопасности (например, Hugging Face Datasets). Вам понадобится среда Python (библиотека pandas для обработки данных) и понимание статьи «Доверие — это не оценка: как ограничить власть ИИ-агентов». Помните, что высокий рейтинг безопасности в отчетах не гарантирует защиту от всех угроз.&lt;/p&gt;\n&lt;h2 id=\"shagi\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#shagi\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Шаги&lt;/span&gt;&lt;/a&gt;Шаги&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;Выберите датасет, содержащий логи взаимодействия ИИ с вредоносными запросами. Убедитесь, что данные включают метаданные о методах обучения модели.&lt;/li&gt;\n&lt;li&gt;Загрузите данные в среду анализа. Проверьте структуру: наличие столбцов с типами атак и реакцией системы.&lt;/li&gt;\n&lt;li&gt;Проведите фильтрацию по первичным исходам: сколько раз модель отклонила запрос, а сколько — выполнила его, несмотря на нарушение правил.&lt;/li&gt;\n&lt;li&gt;Сравните полученные показатели с заявленными характеристиками безопасности. Если расхождение превышает 5–10%, система требует жесткого внешнего контроля.&lt;/li&gt;\n&lt;li&gt;Визуализируйте частоту ошибок, чтобы выявить паттерны, где ИИ теряет контроль над выполнением инструкций.&lt;/li&gt;\n&lt;/ol&gt;\n&lt;h2 id=\"gde-oshibayutsya\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#gde-oshibayutsya\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Где ошибаются&lt;/span&gt;&lt;/a&gt;Где ошибаются&lt;/h2&gt;\n&lt;p&gt;Главная ошибка — доверять агрегированным оценкам (рейтингам) без анализа исходных данных. Как отмечается в статье «Доверие — это не оценка: как ограничить власть ИИ-агентов», усредненный показатель безопасности скрывает критические уязвимости. Также часто забывают про проверку условий обучения: модель, обученная на ограниченном наборе данных, покажет высокую точность только в узких сценариях.&lt;/p&gt;\n&lt;h2 id=\"primer\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#primer\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Пример&lt;/span&gt;&lt;/a&gt;Пример&lt;/h2&gt;\n&lt;p&gt;Представьте датасет с 1000 запросов к ИИ-агенту. Если 990 запросов обработаны корректно, рейтинг составляет 99%. Однако, если оставшиеся 10 запросов касаются обхода правил контроля, система небезопасна. Анализ должен фокусироваться именно на этих 10 случаях, а не на общем проценте успеха.&lt;/p&gt;\n&lt;h2 id=\"osnovano-na-statyah\"&gt;&lt;a href=\"tutorials/howto-dataset_week.html#osnovano-na-statyah\" class=\"yfm-anchor\" aria-hidden=\"true\"&gt;&lt;span class=\"visually-hidden\" data-no-index=\"true\"&gt;Основано на статьях&lt;/span&gt;&lt;/a&gt;Основано на статьях&lt;/h2&gt;\n&lt;ol&gt;\n&lt;li&gt;&lt;a href=\"2026-10-02/trust-is-not-a-score-runtime-assurance-contracts-for-high-ri.html\"&gt;Доверие — это не оценка: как ограничить власть ИИ-агентов&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Концепции: &lt;a href=\"concepts/spec-data.html\"&gt;Открытые данные&lt;/a&gt;&lt;/p&gt;\n","meta":{"metadata":[{"name":"generator","content":"Diplodoc Platform v5.15.6"},{"name":"description","content":"Разбираем, как использовать открытые данные для оценки безопасности ИИ, опираясь на принципы контроля систем."}],"style":["_assets/biosignal.css"],"script":["_assets/biosignal.js"],"title":"Датасет недели: как проверять надежность ИИ-агентов","description":"Разбираем, как использовать открытые данные для оценки безопасности ИИ, опираясь на принципы контроля систем.","vcsPath":"tutorials/howto-dataset_week.md"},"headings":[{"title":"Что понадобится","href":"tutorials/howto-dataset_week.html#chto-ponadobitsya","level":2},{"title":"Шаги","href":"tutorials/howto-dataset_week.html#shagi","level":2},{"title":"Где ошибаются","href":"tutorials/howto-dataset_week.html#gde-oshibayutsya","level":2},{"title":"Пример","href":"tutorials/howto-dataset_week.html#primer","level":2},{"title":"Основано на статьях","href":"tutorials/howto-dataset_week.html#osnovano-na-statyah","level":2}],"title":"Датасет недели: как проверять надежность ИИ-агентов"},"router":{"pathname":"tutorials/howto-dataset_week","depth":2,"base":"../"},"lang":"ru","langs":["ru"],"viewerInterface":{"favicon-src":"_assets/logo.svg","toc":true,"search":true,"feedback":true}}
+        </script>
+        <script type="application/javascript">
+            const data = document.querySelector('script#diplodoc-state');
+            window.__DATA__ = JSON.parse((function unescape(string) {
+                return string.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+              })(data.innerText));
+            window.STATIC_CONTENT = false;
+        </script>
+        <script type="application/javascript" defer src="toc.js"></script>
+        <script type="application/javascript" defer src="_bundle/vendor-cc74e4dafed769a9.js"></script>
+        <script type="application/javascript" defer src="_bundle/react-23c48c44d4a3ad02.js"></script>
+        <script type="application/javascript" defer src="_bundle/app-ba6364e2395fcb2b.js"></script>
+        <script type="application/javascript" defer src="_assets/biosignal.js"></script>
+        
+    </body>
+</html>
